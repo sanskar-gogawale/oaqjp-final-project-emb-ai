@@ -17,6 +17,9 @@ def emotion_detector_route():
     """Analyze the text sent by the user."""
     text_to_analyze = request.args.get("textToAnalyze")
 
+    if not text_to_analyze:
+        return "Invalid input. Please provide text to analyze.", 400
+
     result = emotion_detector(text_to_analyze)
 
     return (
