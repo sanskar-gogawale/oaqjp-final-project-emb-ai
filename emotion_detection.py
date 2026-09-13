@@ -1,3 +1,5 @@
+"""Emotion detection using IBM Watson Natural Language Understanding."""
+
 import json
 import requests
 
